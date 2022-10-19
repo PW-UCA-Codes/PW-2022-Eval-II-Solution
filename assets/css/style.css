@@ -1,0 +1,389 @@
+:root {
+  --theme-primary-color: #222831;
+  --theme-primary-color-alt: #393e46;
+  --theme-secondary-color: #495c83;
+  --theme-secondary-color-alt: #7a86b6;
+  --theme-accent-color: #d1274b;
+  --theme-accent-color-alt: #d1274b;
+  --theme-background-color: #eee;
+  --theme-light-color: #fff4e4;
+  --theme-dark-color: #222831;
+
+  --theme-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p,
+a,
+button,
+input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--theme-background-color);
+}
+
+/*
+  -> Loading Splash
+*/
+#loading-splash.visible {
+  display: flex;
+}
+
+#loading-splash {
+  display: none;
+  position: fixed;
+  inset: 0;
+
+  background: #000000dd;
+  color: var(--theme-accent-color);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 100;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: var(--theme-light-color);
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: var(--theme-light-color);
+}
+
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+
+  5% {
+    transform: scale(1.1);
+  }
+
+  39% {
+    transform: scale(0.85);
+  }
+
+  45% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+/*
+  -> Header section
+*/
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+
+  background: var(--theme-primary-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: var(--theme-box-shadow);
+}
+
+header h1 {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 4rem;
+  color: var(--theme-light-color);
+
+  user-select: none;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header nav button {
+  padding: 1ch 2ch;
+
+  background: var(--theme-accent-color);
+
+  font-family: "Space mono", monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--theme-light-color);
+  text-transform: capitalize;
+
+  border: none;
+  border-radius: 0 8px;
+  cursor: pointer;
+
+  transition: all ease-in-out 250ms;
+}
+
+header nav button:hover {
+  transform: scale(1.05);
+}
+
+/*
+  -> Generic Section
+*/
+
+body>section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+body>section h2 {
+  padding: 1rem;
+
+  background: var(--theme-accent-color);
+
+  text-align: center;
+  color: var(--theme-light-color);
+
+  border-radius: 1rem;
+}
+
+/*
+  -> Booster Draft section
+*/
+
+.lateral-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.cards-controls {
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+
+  background: var(--theme-primary-color-alt);
+  color: var(--theme-light-color);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  position: sticky;
+  top: 1rem;
+
+  border-radius: 1rem;
+  box-shadow: var(--theme-box-shadow);
+  z-index: 1;
+}
+
+.cards-controls .buttons {
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+.cards-controls .buttons button {
+  padding: 0.5rem;
+
+  color: var(--theme-light-color);
+  font-size: 1rem;
+
+  background: var(--theme-accent-color);
+  border: none;
+  border-radius: 8px 0;
+  cursor: pointer;
+}
+
+#booster-cards {
+  flex: 1 0 600px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 275px);
+  grid-auto-rows: auto;
+
+  place-content: center;
+  place-items: center;
+  gap: 1rem;
+}
+
+/*
+  -> Card component
+*/
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+
+  position: relative;
+  transition: ease-in-out all 250ms;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(1px 1px 2px #222);
+}
+
+.card:hover .card-info,
+.card:focus .card-info,
+.card:focus-within .card-info {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card-info {
+  padding: 1rem;
+  visibility: hidden;
+  opacity: 0;
+
+  background: #000000dd;
+  color: var(--theme-light-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+
+  position: absolute;
+  inset: 0;
+
+  transition: all ease-in-out 250ms;
+}
+
+.card-info>div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+}
+
+.card-info .card-header * {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card-info .card-header h3 {
+  font-family: "Space mono", monospace;
+}
+
+.card-info .card-header p {
+  text-transform: capitalize;
+}
+
+.card-info .card-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-info .card-buttons button {
+  width: 64px;
+  height: 64px;
+  padding: 1rem;
+
+  font-size: 1.2rem;
+  color: var(--theme-light-color);
+
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.card-info .card-buttons .card-add-btn {
+  background: green;
+}
+
+.card-info .card-buttons .card-remove-btn {
+  background: crimson;
+}
+
+.card-info .card-footer * {
+  text-align: end;
+}

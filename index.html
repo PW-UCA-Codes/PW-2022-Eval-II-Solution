@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handlee&family=Montserrat:wght@300;400&family=Roboto:wght@300;400&family=Space+Mono&display=swap"
+    rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/a48941071c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js"></script>
+
+  <title> Draft your booster </title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      Where the magic begins
+    </h1>
+
+    <nav>
+      <button id="landing-get-booster-btn">
+        Booster Draft
+      </button>
+      <button id="landing-my-deck-btn">
+        Check my deck
+      </button>
+    </nav>
+  </header>
+
+  <section id="booster-draft-section">
+    <h2>
+      Booster Draft
+    </h2>
+
+    <div class="lateral-section">
+      <section class="cards-controls">
+        <h3>
+          Controls
+        </h3>
+        <p>
+          Boosters Fetched: <span id="boosters-fetched-num"> --- </span>
+        </p>
+        <div class="buttons">
+          <button id="booster-fetch-btn">
+            Get new Booster
+          </button>
+          <button id="booster-save-all-btn">
+            Save All Cards
+          </button>
+          <button id="booster-clear-btn">
+            Clear data
+          </button>
+        </div>
+      </section>
+      <section id="booster-cards">
+        <article class="card" tabindex="0" data-card="0">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+          <!-- <div class="card-info">
+            <div class="card-header">
+              <h3> Card title </h3>
+              <p>
+                1/1
+              </p>
+              <p>
+                Uncommon
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="card-add-btn">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+            <div class="card-footer">
+              <p class="card-type-line">
+                Creature — Human Wizard
+              </p>
+            </div>
+          </div> -->
+        </article>
+        <article class="card" tabindex="0" data-card="1">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="2">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="3">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="4">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="5">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="6">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="7">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="8">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="9">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="10">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="11">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="12">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="13">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+        <article class="card" tabindex="0" data-card="14">
+          <figure class="card-image">
+            <img src="assets/images/mtg_back.png" alt="Empty Card">
+          </figure>
+        </article>
+      </section>
+    </div>
+  </section>
+
+  <section id="my-deck-section">
+    <h2>
+      Deck
+    </h2>
+  </section>
+
+  <div id="loading-splash">
+    <div class="lds-heart">
+      <div></div>
+    </div>
+  </div>
+</body>
+
+</html>
